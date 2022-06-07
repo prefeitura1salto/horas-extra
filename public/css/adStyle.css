@@ -1,0 +1,173 @@
+:root {
+  --background: #c4c4c4;
+  --bg-button: #a7a7a7;
+  --bg-light: #f3efef;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-light);
+}
+
+header {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--background);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5% 3%;
+}
+
+.logotipo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logotipo img {
+  width: 40%;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+}
+
+.logout-btn button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+  border-radius: 0.5rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.logout-btn button:hover {
+  background-color: var(--bg-button);
+  transition: all 0.25s ease-in-out;
+}
+
+.section-info__container {
+  display: flex;
+  padding: 1% 1%;
+  flex-direction: column;
+  font-size: medium;
+  width: 100%;
+  height: fit-content;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.mat-func,
+.name-sec,
+.hours-cpf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: 300;
+}
+
+.mat,
+.func,
+.name,
+.sec,
+.cpf,
+.hours,
+.hours-fault {
+  margin: 1%;
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.options-sec__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  padding: 1% 1%;
+}
+
+.card {
+  position: relative;
+  flex: 1;
+  height: 17rem;
+  padding: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1% 1%;
+  margin: 1%;
+  border-radius: 1rem;
+  background-color: var(--background);
+  font-size: medium;
+  font-weight: 300;
+  max-width: calc(100% / 5);
+  box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.33);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.035);
+  transition: all 0.25s ease-in-out;
+}
+
+.card img {
+  width: 6rem;
+  margin: 50% 0;
+}
+
+@media only screen and (max-width: 796px) {
+  nav {
+    padding: 2.5% 3%;
+  }
+
+  .logotipo img {
+    width: 60%;
+  }
+
+  .options-sec__container {
+    flex-direction: column;
+  }
+
+  .card {
+    max-width: 100%;
+    width: 80%;
+    margin: 1rem;
+  }
+}
+@media only screen and (min-width: 996px) {
+  .options-sec__container {
+    margin-top: 3rem;
+  }
+  .card {
+    height: 25rem;
+  }
+}

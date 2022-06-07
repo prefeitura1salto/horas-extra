@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,100&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@300;500;700&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/adStyle.css" />
+    <title><%= pageTitle %></title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logotipo">
+          <img
+            src="/assets/img/logotipo_prefeitura.png"
+            alt="logo prefeitura"
+          />
+        </div>
+        <div class="logout-btn">
+          <button>SAIR</button>
+        </div>
+      </nav>
+    </header>
+    <section id="user-info">
+      <div class="section-info__container">
+        <div class="mat-func">
+          <div class="mat">
+            <span><strong>MATRICULA:</strong></span
+            ><span> <%= data.mat ? data.mat : null %> </span>
+          </div>
+          <div class="func">
+            <span><strong>FUNÇÃO:</strong></span
+            ><span> <%= data.func ? data.func : null %> </span>
+          </div>
+        </div>
+        <div class="name-sec">
+          <div class="name">
+            <span><strong>NOME:</strong></span
+            ><span> <%= data.name ? data.name : null %> </span>
+          </div>
+          <div class="sec">
+            <span><strong>SECRETARIA:</strong></span
+            ><span> <%= data.department ? data.department : null %> </span>
+          </div>
+        </div>
+        <div class="hours-cpf">
+          <div class="cpf">
+            <span><strong>CPF:</strong></span
+            ><span> <%= data.cpf ? data.cpf : null %> </span>
+          </div>
+          <div class="hours">
+            <span><strong>HORAS EXTRAS:</strong></span
+            ><span> <%= data.hours ? data.hours : 0 %> </span>
+          </div>
+          <div class="hours-fault">
+            <span><strong>FALTAS ABONADAS:</strong></span
+            ><span> <%= data.faults ? data.faults : 0 %> </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="options">
+      <div class="options-sec__container">
+        <div class="request card">
+          <div class="card-img">
+            <img src="/assets/img/request.png" alt="request" />
+          </div>
+          <div class="title">SOLICITAR HORAS EXTRAS</div>
+        </div>
+        <div class="request card">
+          <div class="card-img">
+            <img src="/assets/img/file.png" alt="request" />
+          </div>
+          <div class="title">SOLICITAÇÕES</div>
+        </div>
+        <div class="request card">
+          <div class="card-img">
+            <img src="/assets/img/timetable.png" alt="request" />
+          </div>
+          <div class="title">SOLICITAR FALTA ABONADA</div>
+        </div>
+        <div class="request card">
+          <div class="card-img">
+            <img src="/assets/img/pesquisa-de-mercado.png" alt="request" />
+          </div>
+          <div class="title">CONSULTAR USUÁRIO</div>
+        </div>
+        <% if (isAdmin) { %>
+        <div class="request card" id="admin">
+          <div class="card-img">
+            <img src="/assets/img/webpage.png" alt="request" />
+          </div>
+          <div class="title">PAINEL ADMIN</div>
+        </div>
+        <% } %>
+      </div>
+    </section>
+
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

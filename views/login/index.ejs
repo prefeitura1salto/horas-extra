@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,300;1,700&family=Poppins:wght@200;300;400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,300;8..144,500;8..144,700;8..144,900&family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title><%= pageTitle %></title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-form__container">
+        <form action="/auth" class="login-form" method="POST">
+          <div class="login-form__image">
+            <img
+              src="/assets/img/logotipo_prefeitura.png"
+              alt="logo prefeitura"
+            />
+          </div>
+          <div class="login-form__title">
+            <h2>Sistema de Solicitação</h2>
+            <hr />
+            <h2>Hora Extra</h2>
+          </div>
+          <div class="login-form__inner-container">
+            <div class="login-form__user">
+              <label for="user" id="mat">MATRICULA:</label>
+              <input type="text" name="user" id="user" />
+            </div>
+            <div class="login-form__password">
+              <label for="password" id="pass">SENHA:</label>
+              <input type="password" name="password" id="password" />
+            </div>
+            <div class="login-form__btnsub">
+              <input type="submit" value="ENTRAR" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/heCustom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,100&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@300;500;700&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/adStyle.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>
+        <%= pageTitle %>
+    </title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logotipo">
+                <img src="/assets/img/logotipo_prefeitura.png" alt="logo prefeitura" />
+            </div>
+            <div class="logout-btn">
+                <button>SAIR</button>
+            </div>
+        </nav>
+    </header>
+    <form action="/admin/user_register" method="POST">
+        <div class="container">
+            <div class="wrapper main-wrapper">
+                <div>
+                    <label for="mat">MATRICULA:</label>
+                    <input type="text" name="mat" id="mat">
+                </div>
+                <div>
+                    <label for="name">NOME:</label>
+                    <input type="text" name="name" id="name">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div>
+                    <label for="mat">SENHA:</label>
+                    <input type="password" name="pass" id="pass">
+                </div>
+                <div>
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" id="cpf">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div>
+                    <label for="sec">SECRETARIA:</label>
+                    <input type="text" name="sec" id="sec">
+                </div>
+                <div>
+                    <label for="func">FUNÇÃO:</label>
+                    <input type="text" name="func" id="func">
+                </div>
+                <div>
+                    <label for="set">SETOR:</label>
+                    <input type="text" name="set" id="set">
+                </div>
+                <div class="last">
+                    <label for="is-admin">CONTA ADMINISTRADORA?:</label>
+                    <input type="text" name="isAdmin" id="is-admin">
+                </div>
+            </div>
+            <div class="submit">
+                <input type="submit" value="CADASTRAR">
+            </div>
+        </div>
+    </form>
+
+</html>
